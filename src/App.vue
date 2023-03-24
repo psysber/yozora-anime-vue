@@ -8,7 +8,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 
 
 const scaleRef: any = ref(); // 实例化
