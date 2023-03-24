@@ -1,0 +1,140 @@
+@import './md.css';
+
+html,
+body,
+#app {
+	margin: 0;
+	padding: 0;
+
+}
+
+
+html.dark {
+	color: #e5e7eb;
+	background: #121212;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.prose {
+	scroll-behavior: smooth;
+}
+
+.hover_anime {
+@apply transition duration-200 ease-in-out transform hover: -translate-y-1;
+}
+
+.hover_pointer {
+	li:not(:first-child):hover {
+		.hover_anime;
+	@apply text-purple-400;
+
+	}
+}
+
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+@apply bg-blue-700 bg-opacity-75;
+
+	background: repeating-linear-gradient(90deg, #00dc82 0, #34cdfe 50%, #0047e1);
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 2px;
+}
+
+/*
+* 全局滚动条
+*/
+::-webkit-scrollbar {
+	width: 11px;
+	height: 11px;
+	background-color: rgb(246, 247, 248);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(233, 236, 239);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(246, 247, 248);
+	border-radius: 10px;
+}
+
+html.dark ::-webkit-scrollbar,
+html.dark ::-webkit-scrollbar-track {
+	background-color: #212529;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+	background-color: #343a40;
+}
+
+.slide-fade-enter-active {
+	transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+	transition: all 0.5s;
+}
+
+.slide-fade-enter-from, .slide-fade-leave-to {
+	opacity: .3;
+}
+
+.slide-fade-enter-to, .slide-fade-leave-from {
+	opacity: 1;
+}
+
+
+:root {
+	--color-highlight: 233, 233, 233;
+	--color-bg-base: 249, 250, 251;
+	--color-bg-nav: 243, 244, 246;
+	--color-text-main: 31, 41, 55;
+	--color-text-muted: 243, 244, 246;
+	--color-text-invert: 249, 250, 251;
+	--color-fill-main: 59, 130, 246;
+	--color-fill-muted: 191, 219, 254;
+}
+
+.dark-theme {
+	--color-highlight: 37, 99, 235;
+	--color-bg-base: 75, 85, 99;
+	--color-bg-nav: 55, 65, 81;
+	--color-text-main: 245, 245, 244;
+	--color-text-muted: 250, 250, 249;
+	--color-text-invert: 245, 245, 244;
+	--color-fill-main: 37, 99, 235;
+	--color-fill-muted: 147, 197, 253;
+}
+
+.tiger-theme {
+	--color-highlight: 245, 158, 11;
+	--color-bg: 249, 250, 251;
+	--color-bg-nav: 243, 244, 246;
+	--color-text-main: 31, 41, 55;
+	--color-text-muted: 252, 211, 77;
+	--color-text-invert: 254, 252, 232;
+	--color-fill-main: 251, 113, 133;
+	--color-fill-muted: 255, 241, 242;
+}
+
+.overflow-line2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
